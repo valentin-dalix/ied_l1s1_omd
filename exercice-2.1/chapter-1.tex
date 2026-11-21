@@ -1,0 +1,136 @@
+\section{Exercice 1.1}
+\subsection{Consignes de l'exercice}
+\begin{tcb-instructions}[title=Exercice 1.1]
+À l’aide d’Europresse (ou d’un autre agrégateur de contenu mis à votre disposition
+par votre B.U) :
+
+    \begin{itemize}[label=\checkmark]
+        \item Réalisez un ”Dossier de Presse” autour d’une thématique scientifique, d’un sujet d’actualité ou d’un ”acteur” (personnalité connue, un groupe musical, un peintre ou un auteur apprécié, un sportif, ...) de votre choix.
+
+           \begin{itemize}
+                \item Ce dossier au format PDF doit être paginé, comporter un sommaire dont les titres des articles sont hyperliés à leur contenu. Placez ce dossier dans l’unique archive qui sera jointe au PDF. Si vous avez regardé les tutoriaux (important), vous verrez que ce dossier se constitue automatiquement très rapidement et en quelques clics.
+                \item Dans le corps de votre réponse, donnez quelques explications sur vos choix, sur la thématique (ou l’acteur retenu qui peut être vous-même si vous pratiquez une activité sportive ou artistique), la ou les requêtes formulées (qui doit (doivent) être précise.s et donc en utilisant la recherche avancée exclusivement) et une C.E (copie d’écran) des résultats bruts obtenus.
+            \end{itemize}
+
+        \item Réalisez ensuite un Tag Cloud de votre Corpus d’articles à l’aide d’outils en ligne comme (au choix, liste non exhaustive) : ”Nuage de Mots”, ”MonkeyLearn WordCloud Generator”, ”Jason Davies Wordle” (voir ”github.com/jasondavies/d3-cloud” pour en savoir plus) ou encore ”Tag Crowd”. (Ces outils proposant des options différentes, le mieux est sans doute de les tester...).
+
+            \begin{itemize}
+                \item Les Aficionados de la programmation pourront réaliser ce Tag Cloud à l’aide d’un langage de leur choix. Par exemple en Python à l’aide de la librairie ”WordCloud” ”github.com/amueller/word\_cloud” ou encore en JAVA avec ”Kumo” et une petite recherche sur Internet (il y en a beaucoup !)). N’oubliez pas de C.C votre code commenté (+ joindre à l’archive) et d’ajouter la ou les C.E(s) du nuage obtenu.
+            \end{itemize}
+
+        \item Ajoutez enfin à votre réponse, en quelques lignes, une Analyse Sommaire des Tendances (signaux forts et faibles) de cette collecte d’information à l’aide de votre nuage obtenu.
+
+    \end{itemize}
+\end{tcb-instructions}
+
+\subsection{Choix du sujet}
+J'ai démarré ma réflexion sur cet exercice le 05 novembre 2026, date à laquelle j'observais avec attention les résultats des \textit{Midterms} (les élections de mi-mandat) aux États-Unis : c'est un sujet pour lequel j'ai une attirance particulière compte tenu de mon passé d'enseignant d'anglais et de ma passion pour l'histoire politique américaine.
+
+Depuis plus de 6 mois, j'entretiens régulièrement une correspondance écrite et orale avec une Américaine, devenue mon amie, originaire de Boston (Massachusetts) et qui vit actuellement près d'Anchorage, dans l'État d'Alaska. Cette relation m'a permis de découvrir cet État très particulier par son emplacement géographique et ses traditions assez éloignées de la norme Américaine.
+
+Lors de ces élections, l'Alaska s'est retrouvé au cœur de l'actualité pour deux raisons majeures :
+    \begin{itemize}
+        \item Pour la première fois depuis 2014, le siège de sénateur de l'Alaska a basculé dans le camp démocrate, alors qu'il s'agit d'un État historiquement ancré dans la tradition républicaine (à l'image du Texas, par exemple, qui lui aussi a basculé aux dernières élections). Depuis 1968, l'Alaska n'a été représenté par un sénateur démocrate que pendant six ans, de 2009 à 2015.
+        \item La candidate démocrate a été accusée d'avoir eu recours à une manœuvre politique visant à favoriser son élection : faire candidater (sous l'étiquette d'indépendant) un enseignant à la retraite portant quasiment le même nom que le sénateur républicain dont le siège était en jeu, Dan Sullivan. Comme le résumait Mélodie Pépin dans \textit{L'Histoire du jour} (un podcast de \textit{Radio France}) il y a peu, Mary Peltola serait allée \enquote{chercher un homonyme au candidat républicain pour embrouiller les électeurs au moment de voter avec deux Dan Sullivan sur le bulletin. Dan J. Sullivan face à Dan S. Sullivan, lui-même soutenu par Dan A. Sullivan.}\autocite{rf-hdj}
+    \end{itemize}
+
+J'ai voulu en savoir plus et me suis dit que ce serait probablement un bon sujet à traiter dans le cadre de cet exercice. J'ai attendu la proclamation officielle des résultats (qui a pris beaucoup de temps dans cet État) avant de constituer mon dossier de presse.
+
+\subsection{Utilisation de l'agrégateur \textit{Europresse}}
+\subsubsection{Méthodologie de recherche}
+Après avoir suivi les tutoriels indiqués dans le cours, j'ai utilisé la recherche avancée du service \textit{Europresse} pour obtenir une première sélection d'articles. J'ai fait les choix suivants :
+    \begin{itemize}
+        \item Date : 30 derniers jours
+        \item Domaine de recherche : sources en anglais
+        \item Critères :
+            \begin{itemize}
+                \item \verb!("Dan Sullivan" | "Daniel J. Sullivan" | "Dan J. Sullivan")!
+                \item \verb!& Alaska+!
+                \item \verb!& (election+ | fraud+ | cheat+)!
+            \end{itemize}
+    \end{itemize}
+
+Il ne me semblait pas pertinent de pousser au-delà des 30 jours compte tenu du fait que cette recherche a été effectuée le 20 novembre 2026, soit bien moins d'un mois après les élections.
+
+Compte tenu de l'aspect très local de cette actualité j'ai préféré rechercher uniquement des sources anglophones pour obtenir des résultats plus nombreux et faciliter la création de mon futur \textit{tag cloud}.
+
+J'ai utilisé des critères assez larges : les trois noms (entre guillemets pour indiquer que je veux les occurrences exactes), les termes \textit{Alaska}, \textit{election}, \textit{fraud} et \textit{cheat} (respectivement élection, fraude et triche) suivis d'un signe \verb|+| afin d'inclure leurs dérivés. J'ai séparé les deux dernières lignes car Alaska est le critère que je souhaitais nécessairement voir apparaître, alors qu'un seul des trois mots de la ligne suivante m'était suffisant.
+
+\subsubsection{Problème rencontré et correction apportée}
+Après une rapide sélection d'une cinquantaine d'articles qui me paraissaient pertinents parmi les plus de 2000 qui m'étaient affichés, j'ai produit le PDF demandé à l'aide du bouton \verb|exporter|.
+
+À l'ouverture du PDF et après quelques minutes à observer son contenu, je me suis inquiété du fait que de nombreux articles n’apparaissaient pas dans leur intégralité mais seulement sous forme de lien vers les sites internet de presse concernés. Ce n'est peut-être pas vraiment problématique en situation réelle, mais cela allait forcément poser problème au moment de la création du \textit{Tag Cloud} demandé.
+
+Je suis donc revenu sur mes pas pour adapter mes critères de recherche en essayant de trouver ce qui me posait problème. Ces articles qui n'affichent que des liens et non leur contenu complet sont dans les sources dites \enquote{presse web référencée}. Je les ai donc supprimées d'office de ma recherche en me disant que quand bien même j'obtiendrai moins de résultats, ils seront de fait tous exploitables facilement pour cet exercice (c'est une limite acceptable, même si elle introduit forcément un biais car elle masque une partie de la couverture médiatique).
+
+J'ai procédé à une nouvelle recherche avec ces critères adaptés (\autoref{fig:ex-1.1_europresse-brut}), fait une nouvelle sélection et les ai exportés à l'aide du même bouton que précédemment.
+
+    \begin{figure}[htbp]
+        \centering
+        \setlength{\fboxsep}{0pt}
+        \fbox{\includegraphics[width=\textwidth]{assets/figures/ex-1.1_europresse-brut}}
+        \caption{Les résultats bruts de ma recherche finale sur \textit{Europresse}}
+        \label{fig:ex-1.1_europresse-brut}
+    \end{figure}
+
+Le PDF obtenu correspond bien aux consignes de l'exercice et est exploitable.
+
+\subsection{Création du nuage de mot}
+\subsubsection{Essais et méthodologie}
+J'ai utilisé les différents liens produits dans le cours, mais plusieurs problèmes se sont posés :
+    \begin{itemize}
+        \item Tous ne permettent pas l'exploitation d'un fichier au format PDF.
+        \item Tous ne proposent pas les mêmes outils.
+        \item Certain liens sont même cassés (comme \textit{MonkeyLearn WordCloud Generator}.)
+    \end{itemize}
+
+J'ai alors fait une recherche Google en indiquant juste \verb|nuage de mots| et après plusieurs tentatives je me suis arrêté sur un outil mis à disposition par la \textit{Direction du numérique pour l'éducation du ministère de l'Éducation Nationale} (on ne se refait pas...)
+
+Assez bizarrement, l'outil \textit{Nuage de mots}\footnote{\href{https://laurentbernard.forge.apps.education.fr/WordCloud/}{https://laurentbernard.forge.apps.education.fr/WordCloud/}} est accessible à travers un lien direct sur \textit{Google} alors que le site semble visiblement réservé au personnel de l'Éducation Nationale... Il est très complet et me permet notamment de faire quelque chose que peu de sites me donnaient la possibilité de faire : supprimer les mots du \textit{Tag Cloud} qui manquent de pertinence.
+
+\subsubsection{Problèmes rencontrés et corrections apportées}
+Après avoir téléversé mon PDF, un premier \textit{Tag Cloud} m'est proposé... qui comprend beaucoup de mots inutiles tirés de la présentation même du PDF (\textit{Université Paris VIII, presse, saved documents, source, periodocity}...) Par ailleurs, ce premier jet comprend beaucoup trop de mots (250 !) ce qui le rend difficilement exploitable.
+
+J'utilise donc l'interface du site pour baisser le nombre de mots affichés, augmenter la fréquence minimale nécessaire pour qu'un mot apparaisse, ignorer les mots vides (\textit{and, the, a, an ...}) et exclure une liste de mots (\autoref{fig:ex-1.1_tag-cloud-interface}).
+
+    \begin{figure}[htbp]
+        \centering
+        \setlength{\fboxsep}{0pt}
+        \fbox{\includegraphics[width=\textwidth]{assets/figures/ex-1.1_tag-cloud-interface.png}}
+        \caption{L'interface de l'outil \textit{Nuage de mots}.}
+        \label{fig:ex-1.1_tag-cloud-interface}
+    \end{figure}
+
+Le résultat final (\autoref{fig:ex-1.1_tag-cloud-final}), même s'il n'est pas parfait, est exploitable et expurgé d'une partie conséquente de ses éléments inutiles. Je suppose qu'en conditions réelles, je pourrais éventuellement fournir le fichier PDF généré par \textit{Europresse} à un LLM et lui demander de me fournir une liste de mots à exclure afin d'améliorer la pertinence du nuage de mots? À essayer...
+
+    \begin{figure}[htbp]
+        \centering
+        \setlength{\fboxsep}{0pt}
+        \fbox{\includegraphics[width=\textwidth]{assets/figures/ex-1.1_tag-cloud-final.png}}
+        \caption{Le \textit{Tag Cloud} final}
+        \label{fig:ex-1.1_tag-cloud-final}
+    \end{figure}
+
+\subsection{Analyse sommaire des tendances}
+\subsubsection{Analyse du nuage de mots}
+Si l'on s'en tient uniquement au nuage obtenu, plusieurs mots attendus au vu de l'actualité attirent l’œil : \textit{investigation} (enquête), \textit{justice} (justice), \textit{attorney} (avocat), \textit{independent} (indépendant), \textit{to confuse} / \textit{confusion} (rendre confus / confusion), \textit{campaign} (campagne, dans le sens campagne pour une élection) ou encore \textit{Trump}.
+
+\subsubsection{Signaux forts et signaux faibles}
+À la lecture complète du dossier, plusieurs thèmes récurrents et installés (signaux forts) apparaissent, ainsi que quelques tendances un peu plus discrètes (signaux faibles) :
+
+    \begin{itemize}
+        \item Signal fort \#1 : L'aspect controversé et public de l'affaire ainsi que l'implication de Donald Trump, qui intervient personnellement pour accuser les démocrates (et plus précisément sa candidate, Mary Peltola) de triche.
+        \item Signal fort \#2 : La judiciarisation de l'affaire, avec l'intervention du \textit{Department of Justice} (le département de la Justice, l'équivalent de notre ministère), qui mène l'enquête, demande à des acteurs de ces élections de comparaître pour des auditions...
+        \item Signal faible \#1 : Plusieurs articles mettent discrètement en avant une forme de contestation envers le système électoral en Alaska, notamment du côté des républicains et de Donald Trump. C'est par ailleurs, depuis l'élection présidentielle de 2020 et l'assaut du Capitole, une rhétorique régulièrement présente dans les médias américains et qui tend à se banaliser.
+        \item Signal faible \#2 : De la même manière, est aussi parfois mis en avant le fait que ce n'est pas la première fois que cette technique est utilisée, et qu'il existe des risques que cela se reproduise à l'avenir.
+    \end{itemize}
+
+\subsection{Conclusion}
+En conclusion, cet exercice m'a permis de redécouvrir l'outil \textit{Europresse}, ses évolutions (son interface notamment, qui a changé depuis la dernière fois que je l'ai utilisée dans le cadre de mes précédentes études) et de mettre en pratique en créant un dossier de presse en un clic afin de pouvoir l'exploiter facilement.
+
+Il semble être très puissant pour de la veille informationnelle, à condition de savoir l'utiliser correctement (sans tutoriel, les différents critères à indiquer pour la recherche avancée me semblaient un peu austères et imprécis) et aussi de savoir identifier les différents biais cités dans le cours. Il ne remplace absolument pas une réflexion et une exploitation personnelle du dossier de presse, il ne fait que donner un cliché instantané de l'état de la presse sur un sujet au moment demandé.
+
+La création d'un nuage de mots, même si elle peut avoir un côté ludique, n'est pas suffisante pour une exploitation correcte du dossier pour deux raisons principales : elle gomme beaucoup d'informations et elle nécessite au minimum la création d'une liste d'omissions et des réglages supplémentaires pour rendre le nuage plus lisible dans le cadre de cet exercice. Cela peut cependant être un support intéressant pour démarrer le travail d'exploitation et donner des pistes de réflexion (notamment pour de jeunes élèves en cours, par exemple).
+
+Enfin, un sujet aussi controversé oblige le lecteur à systématiquement garder en tête que faits et opinions sont bien deux choses radicalement différentes. C'est probablement le plus important dans cette démarche : la prise de recul nécessaire pour ne pas tomber dans le piège de la désinformation.
+

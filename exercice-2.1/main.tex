@@ -1,0 +1,22 @@
+% Préambule ---- début
+\documentclass[a4paper,12pt]{article}
+\input{config/packages.tex} % Paquets
+\input{config/colours.tex} % Palette
+\input{config/environments.tex} % Environnements
+\input{config/metadata.tex} % Métadonnées
+\addbibresource{bibliography/references.bib} % Références bibliographiques
+% Préambule ---- fin
+
+% Document ---- début
+\begin{document}
+\input{content/titlepage.tex}
+{\hypersetup{linkcolor=black}
+\tableofcontents
+}
+\include{content/chapter-1.tex}
+\include{content/chapter-2.tex}
+\appendix
+\include{content/annexes.tex}
+\printbibliography[heading=bibintoc]
+\end{document}
+% Document ---- fin

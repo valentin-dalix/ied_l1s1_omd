@@ -1,0 +1,58 @@
+\begin{titlepage}
+
+% Cadre
+    \begin{tikzpicture}[remember picture, overlay]
+    
+        % Rectangle extérieur : dégradé
+        \shade[
+            shading=axis,
+            left color=orange,
+            right color=yellow,
+            shading angle=45
+        ]
+        ([xshift=1cm, yshift=-1cm]
+            current page.north west)
+        rectangle
+        ([xshift=-1cm, yshift=1cm]
+            current page.south east);
+        
+        % Rectangle intérieur : masque blanc
+        \fill[white]
+        ([xshift=1.25cm, yshift=-1.25cm]
+            current page.north west)
+        rectangle
+        ([xshift=-1.25cm, yshift=1.25cm]
+            current page.south east);
+    
+    \end{tikzpicture}
+
+% Logo de l'IED
+    \begin{center}
+        \includegraphics[height=3cm]{assets/images/logo-ied.png}
+    \end{center}
+
+% Séparateur horizontal
+    \begin{center}
+        \textcolor{black}{\rule{0.8\textwidth}{0.5pt}}
+    \end{center}
+
+% Informations personnelles
+    \begin{center}
+        \large \studenttitle{ }\studentfirstname{ }\MakeUppercase{\studentlastname}{ }(ID : \studentID)\\[1cm]
+    \end{center}
+
+% Informations sur le cours
+    \begin{center}
+        \LARGE \textbf{\coursetitle}\\
+    \end{center}
+
+% Information sur l'enseignant et la date
+    \vfill
+    \large \textbf{Enseignant}
+    \hfill
+    \large \textbf{Date}\\
+    \large \teachertitle{ }\teacherfirstname{ }\MakeUppercase{\teacherlastname}
+    \hfill
+    \large \documentdate
+
+\end{titlepage}
